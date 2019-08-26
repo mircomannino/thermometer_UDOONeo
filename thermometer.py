@@ -7,10 +7,10 @@ import time
 def main():
     # Reading data from the MPL3115 sensor
     TEMP_RAW = ""
-    with open("/sys/class/i2c-dev/i2c-1/device/1-0060/iio\:device0/in_temp_raw", "r") as raw_file:
+    with open("/sys/class/i2c-dev/i2c-1/device/1-0060/iio:device0/in_temp_raw", "r") as raw_file:
         TEMP_RAW = raw_file.read()
     TEMP_SCALE = ""
-    with open("/sys/class/i2c-dev/i2c-1/device/1-0060/iio\:device0/in_temp_scale", "r") as scale_file:
+    with open("/sys/class/i2c-dev/i2c-1/device/1-0060/iio:device0/in_temp_scale", "r") as scale_file:
         TEMP_SCALE = scale_file.read()
 
     # Open the serial communication
@@ -22,10 +22,12 @@ def main():
 
     # Compute temperature and send it to the servo motor
     temp = int(TEMP_RAW) * int(TEMP_SCALE)
-    temp_to_servo = map_temp[int(temp)]
+    degrees_to_servo = map_temp[int(temp)]
     print("Temperatura: " + str(int(temp)) + "* ")
-    print(temp_to_servo)
-    ser.write(chr(temp_to_servo))
+    print("Degrees servo: " + str(degrees_to_servo))
+    ser.write(chr(degrees_to_servo))
+    
+    time.sleep(3)
 
 if __name__ == '__main__':
     main()

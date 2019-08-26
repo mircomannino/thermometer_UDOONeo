@@ -17,10 +17,10 @@ ser = serial.Serial("/dev/ttyS0", 115200, timeout=1)
 ser.flushOutput()
 
 temp = $TEMP_RAW * $TEMP_SCALE
-temp_to_servo = map_temp[int(temp)]
-print("Temperatura: " + str(int(temp)) + "* ")
-print(temp_to_servo)
-ser.write(chr(temp_to_servo))
+degrees_to_servo = map_temp[int(temp)]
+print("Temperature: " + str(int(temp)) + "* ")
+print("Degrees servo: " + str(degrees_to_servo))
+ser.write(chr(degrees_to_servo))
 EOF
 
 sleep 3

@@ -25,7 +25,7 @@ sudo ln -s /dev/ttyMCC /dev/ttyS0
 ```
 It creates a soft link for the serial communication from the two processors of the UDOO board.
 
-Once yuor setup is ready you can upload the arduino sketch on your UDOO board and run "temp_to_servo.sh" from it.
+Once yuor setup is ready you can upload the arduino sketch on your UDOO board and run "termomther.sh" or "thermometer.py" from it.
 
 ## Temperature range
 In this example the temperatures and angle degrees for the servo are descibed in the following tables
@@ -38,7 +38,7 @@ Temperatures  | Degree
 28 | 60
 29 | 30
 
-However if you want to increase the number of available temperatures (and its degree) you can modify the "map_temp" structure in the "temp_to_servo.sh".
+However if you want to increase the number of available temperatures (and its degree) you can modify the "map_temp" structure in the "thermometer.sh" or "thermometer.py" scripts.
 
 ## Debug 
 The file "python_servo_control.py" is a simple python script that check if the servo receive the correct data.

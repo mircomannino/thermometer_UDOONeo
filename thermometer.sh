@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Bash script that reads the temperature from MPL3115 sensor end send it to 
+# the servo motor.
+
 # Reading data from MPL3115
 while [ 1 ]; do
     TEMP_RAW=`cat /sys/class/i2c-dev/i2c-1/device/1-0060/iio\:device0/in_temp_raw`

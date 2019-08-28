@@ -5,7 +5,7 @@ What is needed is:
 * 1 Servo motor 
 * 1 MPL3115 sensor (barometer)
 
-## How does it work
+## How it works
 When it is in function the sensor captures the external temperature and it's rappresented by a specific position of the servo hand.
 
 First of all connect the sensor and the servo (digital pin: 9)  to the UDOO board.

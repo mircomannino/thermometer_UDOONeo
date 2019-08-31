@@ -23,7 +23,7 @@ The next step is to run the following comand:
 ```
 sudo ln -s /dev/ttyMCC /dev/ttyS0
 ```
-It creates a soft link for the serial communication from the two processors of the UDOO board.
+It creates a soft link for the serial communication among the two processors of the UDOO board.
 
 Once yuor setup is ready you can upload the arduino sketch on your UDOO board and run "termomther.sh" or "thermometer.py" from it.
 

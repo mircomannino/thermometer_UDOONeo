@@ -19,7 +19,7 @@ First of all connect the sensor and the servo (digital pin: 9)  to the UDOO boar
 > takes.
 > For any problem consult the official documentation (https://www.udoo.org/docs-neo/Hardware_&_Accessories/Bricks_snap_in_sensors.html)
 
-The next step is to run the following comand:
+**Only for 'thermometer.py' script** the next step is to run the following comand:
 ```
 sudo ln -s /dev/ttyMCC /dev/ttyS0
 ```

@@ -8,7 +8,7 @@ What is needed is:
 ## How it works
 When it is in function the sensor captures the external temperature and it's rappresented by a specific position of the servo hand.
 
-First of all connect the sensor and the servo (digital pin: 9)  to the UDOO board.
+First of all connect the sensor and the servo (digital pin: 9, there is the scheme in the image servo_scheme.png)  to the UDOO board.
 > If your UDOO board is already on when you're connecting the MPL3115 sesor you should run the following commands to proceed:
 > ``` 
 > sudo rmmod mpl3115
